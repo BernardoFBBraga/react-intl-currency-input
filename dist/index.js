@@ -203,6 +203,7 @@ var IntlCurrencyInput = function (_Component) {
     value: function allowedProps() {
       var allowedProps = _extends({}, this.props);
 
+      delete allowedProps.defaultValue;
       delete allowedProps.currency;
       delete allowedProps.config;
       delete allowedProps.autoSelect;
