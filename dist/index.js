@@ -116,14 +116,14 @@ var IntlCurrencyInput = function (_Component) {
           value = _calculateValues4[0],
           maskedValue = _calculateValues4[1];
 
-      if (!this.props.max || value < this.props.max) {
+      if (!this.props.max || value <= this.props.max) {
         this.setState({
           maskedValue: maskedValue
         });
 
         return [value, maskedValue];
       } else {
-        return [this.normalizeValue(this.state.maskedValue), this.state.maskedValue];
+        return [this.normalizeValue(this.state.maskedValue) / 100, this.state.maskedValue];
       }
     }
   }, {
